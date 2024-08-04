@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Switch capability descriptions - Homie5 Profiles</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Switch capability descriptions";
+        var mkdocs_page_input_path = "switch.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Homie5 Profiles
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Introduction to Homie Profiles</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Switch capability descriptions</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#switch-introduction">Switch introduction</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#homie-switch10">homie-switch/1/0</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#required-properties">Required properties</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#value">value</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#optional-properties">Optional properties</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#switch-time">switch-time</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#enable-time">enable-time</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#disable-time">disable-time</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#auto-disable">auto-disable</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#auto-enable">auto-enable</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#homie-sensor-power-switch10">homie-sensor-power-switch/1/0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#homie-sensor-window10">homie-sensor-window/1/0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#homie-sensor-valve10">homie-sensor-valve/1/0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#homie-sensor-presence10">homie-sensor-presence/1/0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#homie-sensor-heat-request10">homie-sensor-heat-request/1/0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#homie-sensor-cool-request10">homie-sensor-cool-request/1/0</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../sensors-numeric/">Numeric sensors capability descriptions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../sensors-binary/">Binary sensors capability descriptions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../inputs/">Input capability descriptions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../contributing/">Contributing</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../LICENSE/">License</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../old_stuff/">older stuff to review, move, or delete</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Homie5 Profiles</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Switch capability descriptions</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="switch-capability-descriptions">Switch capability descriptions</h1>
+<p>This capability description describes a generic switch node, and derived specific switches.</p>
+<h2 id="switch-introduction">Switch introduction</h2>
+<p>A switch is an actor that can switch between 2 states, indicated by a boolean value.</p>
+<p>Specifically typed switches are available for the most common ones. Each with their own profile name and version. The Node layout is the same for all, they only differ by supported <code>format</code> labels.</p>
+<h2 id="homie-switch10">homie-switch/1/0</h2>
+<p>This is the common version if no specific profile is available. The profile name is: <code>homie-switch/1/0</code>.</p>
+<h3 id="required-properties">Required properties</h3>
+<h4 id="value">value</h4>
+<p>The <code>value</code> property (required) is the property of type <code>boolean</code> that holds the switch status and allows to update it</p>
+<table>
+<thead>
+<tr>
+<th>attributes</th>
+<th>value</th>
+<th>remark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>property-id</td>
+<td>"<code>value</code>"</td>
+<td></td>
+</tr>
+<tr>
+<td>settable</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>retained</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>format</td>
+<td></td>
+<td>the <code>format</code> attribute SHOULD be specified to add labels for the <code>false</code> and <code>true</code> values.</td>
+</tr>
+<tr>
+<td>type</td>
+<td>"<code>boolean</code>"</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="optional-properties">Optional properties</h3>
+<h4 id="switch-time">switch-time</h4>
+<p>The <code>switch-time</code> property (optional) determines the time required for a switch to completely switch state. For most
+electrical switches this value is <code>0</code>, indicating it switches instantaneously. For a valve however this will
+not be the case. A motorized valve for water or gas for example typically has a run time of several minutes to
+completely open.</p>
+<p>If this is set then a <code>set</code> command to change the state will delay updating the actual value by this time. This
+behaviour can be made more specific by the optional <code>enable-time</code> and <code>disable-time</code> properties. If they are
+not present, then the <code>switch-time</code> will be used for both <code>enable-time</code> and <code>disable-time</code>.</p>
+<p>Consider an underfloor water based heating system with thermal valves. The valves will
+take 3 minutes to completely open. If a heat request is send to the boiler immediately
+after switching the value to <code>true</code>, the pump will go into an error state because
+it fails to pump the water through the system as the valve is only just starting to open up.</p>
+<p>By setting this value to 180 seconds, the time needed to open the valve completely, this can be prevented.
+After setting the <code>value</code> property to <code>true</code>, the device will wait 180 seconds before it will actually
+set the value of the <code>value</code> property to <code>true</code>. (the <code>target</code> attribute will be updated immediately,
+if present, to indicate the state change is in progress).</p>
+<p>Because the switch might change state again before reaching the end-state, the device will need to
+keep track of time spend enabling/disabling to detect where it exactly is.</p>
+<p>If the <code>enable-time</code> property is available, then the delay between receiving the <code>set=true</code> command and
+reporting the <code>true</code> state will be the time specified in <code>enable-time</code>. If the device was not entirely in the
+<code>disabled</code> state, then the current state should be taken into account.</p>
+<p>If the <code>disable-time</code> property is available, then the delay between receiving the <code>set=false</code> command and
+reporting the <code>false</code> state will be the time specified in <code>disable-time</code>. If the device was not entirely in the
+<code>enabled</code> state, then the current state should be taken into account.</p>
+<p><strong>Note:</strong>: This property becomes REQUIRED when any of the following properties are
+present; <a href="#enable-time"><code>enable-time</code></a> or <a href="#disable-time"><code>disable-time</code></a>.</p>
+<table>
+<thead>
+<tr>
+<th>attributes</th>
+<th>value</th>
+<th>remark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>property-id</td>
+<td>"<code>switch-time</code>"</td>
+<td></td>
+</tr>
+<tr>
+<td>settable</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>retained</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td>"<code>float</code>"</td>
+<td></td>
+</tr>
+<tr>
+<td>format</td>
+<td>"<code>0:</code>"</td>
+<td>Value must be 0 or more</td>
+</tr>
+<tr>
+<td>unit</td>
+<td><code>"s"</code></td>
+<td>The time is provided in seconds</td>
+</tr>
+</tbody>
+</table>
+<p>Example: <em>underfloor heating valve</em></p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>setting</th>
+<th>remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>switch-time</td>
+<td><code>180</code></td>
+<td>3 minutes to reach the end state</td>
+</tr>
+<tr>
+<td>enable-time</td>
+<td><code>60</code></td>
+<td>after 1 minute the valve has opened enough for the pump to start</td>
+</tr>
+<tr>
+<td>disable-time</td>
+<td><code>0</code></td>
+<td>right after starting to close the valve, the pump and boiler are instructed to stop</td>
+</tr>
+</tbody>
+</table>
+<p>Example: <em>garden watering valve</em></p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>setting</th>
+<th>remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>switch-time</td>
+<td><code>120</code></td>
+<td>2 minutes to reach the end state</td>
+</tr>
+<tr>
+<td>enable-time</td>
+<td><code>0</code></td>
+<td>immediate. Right after the valve starts moving, the first drops of water will flow and a user would consider the valve to be open.</td>
+</tr>
+<tr>
+<td>disable-time</td>
+<td><code>120</code></td>
+<td>the valve must be completely closed for the last drops to stop</td>
+</tr>
+</tbody>
+</table>
+<p>Example: time tracking</p>
+<p>Considering these settings (underfloor heating example above):</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>setting</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>switch-time</td>
+<td><code>180</code></td>
+</tr>
+<tr>
+<td>enable-time</td>
+<td><code>60</code></td>
+</tr>
+<tr>
+<td>disable-time</td>
+<td><code>0</code></td>
+</tr>
+</tbody>
+</table>
+<p>This is the timeline and reported state and target values</p>
+<table>
+<thead>
+<tr>
+<th>time (s)</th>
+<th>event</th>
+<th>target</th>
+<th>value</th>
+<th>remark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>start</td>
+<td><code>false</code></td>
+<td><code>false</code></td>
+<td>initial state</td>
+</tr>
+<tr>
+<td>0</td>
+<td><code>set=true</code></td>
+<td><code>true</code></td>
+<td><code>false</code></td>
+<td>command received, new target set, valve motor runs to open</td>
+</tr>
+<tr>
+<td>60</td>
+<td><code>enable-time</code> elapsed</td>
+<td><code>true</code></td>
+<td><code>true</code></td>
+<td>reported state now switched to <code>true</code>, valve motor still runs to open</td>
+</tr>
+<tr>
+<td>120</td>
+<td><code>set=false</code></td>
+<td><code>false</code></td>
+<td><code>true</code></td>
+<td>command received, new target set, valve motor runs to close</td>
+</tr>
+<tr>
+<td>120</td>
+<td><code>disable-time</code> elapsed</td>
+<td><code>false</code></td>
+<td><code>false</code></td>
+<td>reported state now switched to <code>false</code></td>
+</tr>
+<tr>
+<td>150</td>
+<td><code>set=true</code></td>
+<td><code>true</code></td>
+<td><code>false</code></td>
+<td>command received, new target set, valve motor runs to open</td>
+</tr>
+<tr>
+<td>150</td>
+<td><code>enable-time</code> elapsed</td>
+<td><code>true</code></td>
+<td><code>true</code></td>
+<td>ran open for <code>120 s</code>, then close for <code>30 s</code>, so nett state is <code>90 s</code> open, so we're past the <code>enable-time</code>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="enable-time">enable-time</h4>
+<p>The "<code>enable-time</code>" property (optional) is the time required for the switch to be
+considered enabled after it is set to <code>true</code>. For details and examples see the <a href="#switch-time"><code>switch-time</code> property</a>.</p>
+<p><strong>Note</strong>: this value can be larger than the configured <code>switch-time</code>.</p>
+<table>
+<thead>
+<tr>
+<th>attributes</th>
+<th>value</th>
+<th>remark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>property-id</td>
+<td>"<code>enable-time</code>"</td>
+<td></td>
+</tr>
+<tr>
+<td>settable</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>retained</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td><code>float</code></td>
+<td></td>
+</tr>
+<tr>
+<td>format</td>
+<td>"<code>0:</code>"</td>
+<td>Value must be 0 or more</td>
+</tr>
+<tr>
+<td>unit</td>
+<td><code>"s"</code></td>
+<td>The time is provided in seconds</td>
+</tr>
+</tbody>
+</table>
+<h4 id="disable-time">disable-time</h4>
+<p>The "<code>disable-time</code>" property (optional) is the time required for the switch to be
+considered disabled after it is set to <code>false</code>. For details and examples see the <a href="#switch-time"><code>switch-time</code> property</a>.</p>
+<p><strong>Note</strong>: this value can be larger than the configured <code>switch-time</code>.</p>
+<table>
+<thead>
+<tr>
+<th>attributes</th>
+<th>value</th>
+<th>remark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>property-id</td>
+<td>"<code>disable-time</code>"</td>
+<td></td>
+</tr>
+<tr>
+<td>settable</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>retained</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td><code>float</code></td>
+<td></td>
+</tr>
+<tr>
+<td>format</td>
+<td>"<code>0:</code>"</td>
+<td>Value must be 0 or more</td>
+</tr>
+<tr>
+<td>unit</td>
+<td><code>"s"</code></td>
+<td>The time is provided in seconds</td>
+</tr>
+</tbody>
+</table>
+<h4 id="auto-disable">auto-disable</h4>
+<p>The "<code>auto-disable</code>" property (optional) is the time after which the switch automatically disables itself again after it reaches (and reports) the <code>true</code> state.</p>
+<p>Setting <code>auto-disable=0</code> will disable the auto-disable behaviour.</p>
+<p>Behaviour:</p>
+<ul>
+<li>the time starts after the <code>true</code> state has been reported on the <code>value</code> property. This means that the <code>enable-time</code> has past.</li>
+<li>if the <code>value</code> property receives a <code>set=true</code> command while it still has state <code>true</code>, and the <code>auto-disable</code> delay hasn't expired yet, the <code>auto-disable</code> delay is reset to start over.</li>
+<li>if the <code>value</code> property changes state to <code>false</code> before the <code>auto-disable</code> delay expires (for example due to a command received), the auto-disable action is cancelled</li>
+<li>when the <code>auto-disable</code> delay expires, the behaviour is as if a command <code>set=false</code> has been received on the <code>value</code> property. The <code>target</code> attribute becomes <code>false</code>, and after the <code>disable-time</code> has passed the actual value of the <code>value</code> property switches to <code>false</code>, etc.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>attributes</th>
+<th>value</th>
+<th>remark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>property-id</td>
+<td>"<code>auto-disable</code>"</td>
+<td></td>
+</tr>
+<tr>
+<td>settable</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>retained</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td><code>float</code></td>
+<td></td>
+</tr>
+<tr>
+<td>format</td>
+<td>"<code>0:</code>"</td>
+<td>Value must be 0 or more. If <code>0</code> the auto-disable behaviour is disabled.</td>
+</tr>
+<tr>
+<td>unit</td>
+<td><code>"s"</code></td>
+<td>The time is provided in seconds</td>
+</tr>
+</tbody>
+</table>
+<h4 id="auto-enable">auto-enable</h4>
+<p>The "<code>auto-enable</code>" property (optional) is the time after which the switch automatically enables itself again after it reaches (and reports) the <code>false</code> state.</p>
+<p>Setting <code>auto-enable=0</code> will disable the auto-enable behaviour.</p>
+<p>Behaviour:</p>
+<ul>
+<li>the time starts after the <code>false</code> state has been reported on the <code>value</code> property. This means that the <code>disable-time</code> has past.</li>
+<li>if the <code>value</code> property receives a <code>set=false</code> command while it still has state <code>false</code>, and the <code>auto-enable</code> delay hasn't expired yet, the <code>auto-enable</code> delay is reset to start over.</li>
+<li>if the <code>value</code> property changes state to <code>true</code> before the <code>auto-enable</code> delay expires (for example due to a command received), the auto-enable action is cancelled</li>
+<li>when the <code>auto-enable</code> delay expires, the behaviour is as if a command <code>set=true</code> has been received on the <code>value</code> property. The <code>target</code> attribute becomes <code>true</code>, and after the <code>enable-time</code> has passed the actual value of the <code>value</code> property switches to <code>true</code>, etc.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>attributes</th>
+<th>value</th>
+<th>remark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>property-id</td>
+<td>"<code>auto-enable</code>"</td>
+<td></td>
+</tr>
+<tr>
+<td>settable</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>retained</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td><code>float</code></td>
+<td></td>
+</tr>
+<tr>
+<td>format</td>
+<td>"<code>0:</code>"</td>
+<td>Value must be 0 or more. If <code>0</code> the auto-enable behaviour is disabled.</td>
+</tr>
+<tr>
+<td>unit</td>
+<td><code>"s"</code></td>
+<td>The time is provided in seconds</td>
+</tr>
+</tbody>
+</table>
+<h2 id="homie-sensor-power-switch10">homie-sensor-power-switch/1/0</h2>
+<p>The profile name is: <code>homie-sensor-power-switch/1/0</code></p>
+<p>The implementation is identical to the <a href="#homie-sensor-binary10"><code>homie-sensor-binary/1/0</code></a> capability with the
+following modifications:</p>
+<ul>
+<li>the <code>format</code> attribute of the <code>value</code> property MUST be <code>"off,on"</code>.</li>
+</ul>
+<h2 id="homie-sensor-window10">homie-sensor-window/1/0</h2>
+<p>The profile name is: <code>homie-sensor-window/1/0</code></p>
+<p>The implementation is identical to the <a href="#homie-sensor-binary10"><code>homie-sensor-binary/1/0</code></a> capability with the
+following modifications:</p>
+<ul>
+<li>the <code>format</code> attribute of the <code>value</code> property MUST be <code>"closed,open"</code>.</li>
+</ul>
+<h2 id="homie-sensor-valve10">homie-sensor-valve/1/0</h2>
+<p>The profile name is: <code>homie-sensor-valve/1/0</code></p>
+<p>The implementation is identical to the <a href="#homie-sensor-binary10"><code>homie-sensor-binary/1/0</code></a> capability with the
+following modifications:</p>
+<ul>
+<li>the <code>format</code> attribute of the <code>value</code> property MUST be <code>"closed,open"</code>.</li>
+</ul>
+<h2 id="homie-sensor-presence10">homie-sensor-presence/1/0</h2>
+<p>The profile name is: <code>homie-sensor-presence/1/0</code></p>
+<p>The implementation is identical to the <a href="#homie-sensor-binary10"><code>homie-sensor-binary/1/0</code></a> capability with the
+following modifications:</p>
+<ul>
+<li>the <code>format</code> attribute of the <code>value</code> property MUST be <code>"no-presence,presence"</code>.</li>
+</ul>
+<h2 id="homie-sensor-heat-request10">homie-sensor-heat-request/1/0</h2>
+<p>The profile name is: <code>homie-sensor-heat-request/1/0</code></p>
+<p>The implementation is identical to the <a href="#homie-sensor-binary10"><code>homie-sensor-binary/1/0</code></a> capability with the
+following modifications:</p>
+<ul>
+<li>the <code>format</code> attribute of the <code>value</code> property MUST be <code>"off,heat"</code>.</li>
+</ul>
+<h2 id="homie-sensor-cool-request10">homie-sensor-cool-request/1/0</h2>
+<p>The profile name is: <code>homie-sensor-cool-request/1/0</code></p>
+<p>The implementation is identical to the <a href="#homie-sensor-binary10"><code>homie-sensor-binary/1/0</code></a> capability with the
+following modifications:</p>
+<ul>
+<li>the <code>format</code> attribute of the <code>value</code> property MUST be <code>"off,cool"</code>.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Introduction to Homie Profiles"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../sensors-numeric/" class="btn btn-neutral float-right" title="Numeric sensors capability descriptions">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../sensors-numeric/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
