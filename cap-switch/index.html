@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Switch capability descriptions - Homie5 Profiles</title>
+    <title>Capability: Switch - Homie5 Profiles</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Switch capability descriptions";
-        var mkdocs_page_input_path = "switch.md";
+        var mkdocs_page_name = "Capability: Switch";
+        var mkdocs_page_input_path = "cap-switch.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -43,10 +43,32 @@
                 <li class="toctree-l1"><a class="reference internal" href="..">Introduction to Homie Profiles</a>
                 </li>
               </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../cap-inputs/">Capability: Inputs</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../cap-sensors-numeric/">Capability: Sensor - Numeric</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../cap-sensors-binary/">Capability: Sensor - Binary</a>
+                </li>
+              </ul>
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">Switch capability descriptions</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Capability: Switch</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#switch-introduction">Switch introduction</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#examples">Examples</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#minimal-example">Minimal example</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#full-example">Full example</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#homie-switch10">homie-switch/1/0</a>
         <ul>
@@ -72,31 +94,11 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#homie-sensor-power-switch10">homie-sensor-power-switch/1/0</a>
+    <li class="toctree-l2"><a class="reference internal" href="#homie-power-switch10">homie-power-switch/1/0</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#homie-sensor-window10">homie-sensor-window/1/0</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#homie-sensor-valve10">homie-sensor-valve/1/0</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#homie-sensor-presence10">homie-sensor-presence/1/0</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#homie-sensor-heat-request10">homie-sensor-heat-request/1/0</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#homie-sensor-cool-request10">homie-sensor-cool-request/1/0</a>
+    <li class="toctree-l2"><a class="reference internal" href="#homie-valve10">homie-valve/1/0</a>
     </li>
     </ul>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../sensors-numeric/">Numeric sensors capability descriptions</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../sensors-binary/">Binary sensors capability descriptions</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../inputs/">Input capability descriptions</a>
                 </li>
               </ul>
               <ul>
@@ -125,7 +127,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Switch capability descriptions</li>
+      <li class="breadcrumb-item active">Capability: Switch</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -134,11 +136,111 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="switch-capability-descriptions">Switch capability descriptions</h1>
+                <h1 id="capability-switch">Capability: Switch</h1>
 <p>This capability description describes a generic switch node, and derived specific switches.</p>
 <h2 id="switch-introduction">Switch introduction</h2>
 <p>A switch is an actor that can switch between 2 states, indicated by a boolean value.</p>
 <p>Specifically typed switches are available for the most common ones. Each with their own profile name and version. The Node layout is the same for all, they only differ by supported <code>format</code> labels.</p>
+<h3 id="examples">Examples</h3>
+<p>A Homie device with 1 node as a valve.</p>
+<h4 id="minimal-example">Minimal example</h4>
+<p>This minimal example only implements the required properties.</p>
+<p>Description:</p>
+<pre><code class="language-json">{
+  &quot;homie&quot;: &quot;5.0&quot;,
+  &quot;name&quot;: &quot;Lawn water valve&quot;,
+  &quot;version&quot;: 3,
+  &quot;nodes&quot;: {
+
+    &quot;lawn-valve&quot;: {
+      &quot;$profile&quot;: [&quot;homie-valve/1/0&quot;],
+      &quot;name&quot;: &quot;Lawn valve&quot;,
+      &quot;value&quot;: {
+        &quot;settable&quot;: true,
+        &quot;retained&quot;: true,
+        &quot;type&quot;: &quot;boolean&quot;,
+        &quot;format&quot;: &quot;close,open&quot;
+      }
+    }
+
+  }
+}
+</code></pre>
+<p>Topics:</p>
+<pre><code>homie/5/lawn-water/$state            → &quot;ready&quot;
+homie/5/lawn-water/$description      → &quot;{... the above json doc ...}&quot;
+homie/5/lawn-water/lawn-valve/$profile/homie-valve/1 → &quot;0&quot;
+homie/5/lawn-water/lawn-valve/value  → &quot;false&quot;
+</code></pre>
+<h4 id="full-example">Full example</h4>
+<p>This example implements a sensor including all optional properties.</p>
+<p>Description:</p>
+<pre><code class="language-json">{
+  &quot;homie&quot;: &quot;5.0&quot;,
+  &quot;name&quot;: &quot;Lawn water valve&quot;,
+  &quot;version&quot;: 7,
+  &quot;nodes&quot;: {
+
+    &quot;lawn-valve&quot;: {
+      &quot;$profile&quot;: [&quot;homie-valve/1/0&quot;],
+      &quot;name&quot;: &quot;Lawn valve&quot;,
+      &quot;value&quot;: {
+        &quot;settable&quot;: true,
+        &quot;retained&quot;: true,
+        &quot;type&quot;: &quot;boolean&quot;,
+        &quot;format&quot;: &quot;close,open&quot;
+      },
+      &quot;switch-time&quot;: {
+        &quot;settable&quot;: true,
+        &quot;retained&quot;: true,
+        &quot;type&quot;: &quot;float&quot;,
+        &quot;format&quot;: &quot;0:&quot;,
+        &quot;unit&quot;: &quot;s&quot;
+      },
+      &quot;enable-time&quot;: {
+        &quot;settable&quot;: true,
+        &quot;retained&quot;: true,
+        &quot;type&quot;: &quot;float&quot;,
+        &quot;format&quot;: &quot;0:&quot;,
+        &quot;unit&quot;: &quot;s&quot;
+      },
+      &quot;disable-time&quot;: {
+        &quot;settable&quot;: true,
+        &quot;retained&quot;: true,
+        &quot;type&quot;: &quot;float&quot;,
+        &quot;format&quot;: &quot;0:&quot;,
+        &quot;unit&quot;: &quot;s&quot;
+      },
+      &quot;auto-disable&quot;: {
+        &quot;settable&quot;: true,
+        &quot;retained&quot;: true,
+        &quot;type&quot;: &quot;float&quot;,
+        &quot;format&quot;: &quot;0:&quot;,
+        &quot;unit&quot;: &quot;s&quot;
+      },
+      &quot;auto-enable&quot;: {
+        &quot;settable&quot;: true,
+        &quot;retained&quot;: true,
+        &quot;type&quot;: &quot;float&quot;,
+        &quot;format&quot;: &quot;0:&quot;,
+        &quot;unit&quot;: &quot;s&quot;
+      }
+
+    }
+  }
+}
+</code></pre>
+<p>Topics:</p>
+<pre><code>homie/5/lawn-water/$state                   → &quot;ready&quot;
+homie/5/lawn-water/$description             → &quot;{... the above json doc ...}&quot;
+homie/5/lawn-water/lawn-valve/$profile/homie-valve/1 → &quot;0&quot;
+homie/5/lawn-water/lawn-valve/value         → &quot;false&quot;
+homie/5/lawn-water/lawn-valve/switch-time   → &quot;180&quot;
+homie/5/lawn-water/lawn-valve/enable-time   → &quot;0&quot;
+homie/5/lawn-water/lawn-valve/disable-time  → &quot;200&quot;
+homie/5/lawn-water/lawn-valve/auto-disable  → &quot;3600&quot;
+homie/5/lawn-water/lawn-valve/auto-enable   → &quot;0&quot;
+</code></pre>
 <h2 id="homie-switch10">homie-switch/1/0</h2>
 <p>This is the common version if no specific profile is available. The profile name is: <code>homie-switch/1/0</code>.</p>
 <h3 id="required-properties">Required properties</h3>
@@ -581,54 +683,26 @@ considered disabled after it is set to <code>false</code>. For details and examp
 </tr>
 </tbody>
 </table>
-<h2 id="homie-sensor-power-switch10">homie-sensor-power-switch/1/0</h2>
-<p>The profile name is: <code>homie-sensor-power-switch/1/0</code></p>
-<p>The implementation is identical to the <a href="#homie-sensor-binary10"><code>homie-sensor-binary/1/0</code></a> capability with the
+<h2 id="homie-power-switch10">homie-power-switch/1/0</h2>
+<p>The profile name is: <code>homie-power-switch/1/0</code></p>
+<p>The implementation is identical to the <a href="#homie-switch10"><code>homie-switch/1/0</code></a> capability with the
 following modifications:</p>
 <ul>
 <li>the <code>format</code> attribute of the <code>value</code> property MUST be <code>"off,on"</code>.</li>
 </ul>
-<h2 id="homie-sensor-window10">homie-sensor-window/1/0</h2>
-<p>The profile name is: <code>homie-sensor-window/1/0</code></p>
-<p>The implementation is identical to the <a href="#homie-sensor-binary10"><code>homie-sensor-binary/1/0</code></a> capability with the
+<h2 id="homie-valve10">homie-valve/1/0</h2>
+<p>The profile name is: <code>homie-valve/1/0</code></p>
+<p>The implementation is identical to the <a href="#homie-switch10"><code>homie-switch/1/0</code></a> capability with the
 following modifications:</p>
 <ul>
 <li>the <code>format</code> attribute of the <code>value</code> property MUST be <code>"closed,open"</code>.</li>
-</ul>
-<h2 id="homie-sensor-valve10">homie-sensor-valve/1/0</h2>
-<p>The profile name is: <code>homie-sensor-valve/1/0</code></p>
-<p>The implementation is identical to the <a href="#homie-sensor-binary10"><code>homie-sensor-binary/1/0</code></a> capability with the
-following modifications:</p>
-<ul>
-<li>the <code>format</code> attribute of the <code>value</code> property MUST be <code>"closed,open"</code>.</li>
-</ul>
-<h2 id="homie-sensor-presence10">homie-sensor-presence/1/0</h2>
-<p>The profile name is: <code>homie-sensor-presence/1/0</code></p>
-<p>The implementation is identical to the <a href="#homie-sensor-binary10"><code>homie-sensor-binary/1/0</code></a> capability with the
-following modifications:</p>
-<ul>
-<li>the <code>format</code> attribute of the <code>value</code> property MUST be <code>"no-presence,presence"</code>.</li>
-</ul>
-<h2 id="homie-sensor-heat-request10">homie-sensor-heat-request/1/0</h2>
-<p>The profile name is: <code>homie-sensor-heat-request/1/0</code></p>
-<p>The implementation is identical to the <a href="#homie-sensor-binary10"><code>homie-sensor-binary/1/0</code></a> capability with the
-following modifications:</p>
-<ul>
-<li>the <code>format</code> attribute of the <code>value</code> property MUST be <code>"off,heat"</code>.</li>
-</ul>
-<h2 id="homie-sensor-cool-request10">homie-sensor-cool-request/1/0</h2>
-<p>The profile name is: <code>homie-sensor-cool-request/1/0</code></p>
-<p>The implementation is identical to the <a href="#homie-sensor-binary10"><code>homie-sensor-binary/1/0</code></a> capability with the
-following modifications:</p>
-<ul>
-<li>the <code>format</code> attribute of the <code>value</code> property MUST be <code>"off,cool"</code>.</li>
 </ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href=".." class="btn btn-neutral float-left" title="Introduction to Homie Profiles"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../sensors-numeric/" class="btn btn-neutral float-right" title="Numeric sensors capability descriptions">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../cap-sensors-binary/" class="btn btn-neutral float-left" title="Capability: Sensor - Binary"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../contributing/" class="btn btn-neutral float-right" title="Contributing">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -651,10 +725,10 @@ following modifications:</p>
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../cap-sensors-binary/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../sensors-numeric/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../contributing/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
