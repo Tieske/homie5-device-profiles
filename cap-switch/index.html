@@ -44,6 +44,10 @@
                 </li>
               </ul>
               <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../cap-action/">Capability: Action</a>
+                </li>
+              </ul>
+              <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../cap-inputs/">Capability: Inputs</a>
                 </li>
               </ul>
@@ -80,6 +84,8 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#optional-properties">Optional properties</a>
         <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#action">action</a>
+    </li>
     <li class="toctree-l4"><a class="reference internal" href="#switch-time">switch-time</a>
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#enable-time">enable-time</a>
@@ -173,7 +179,7 @@ homie/5/lawn-water/lawn-valve/$profile/homie-valve/1 → &quot;0&quot;
 homie/5/lawn-water/lawn-valve/value  → &quot;false&quot;
 </code></pre>
 <h4 id="full-example">Full example</h4>
-<p>This example implements a sensor including all optional properties.</p>
+<p>This example implements a switch including all optional properties.</p>
 <p>Description:</p>
 <pre><code class="language-json">{
   &quot;homie&quot;: &quot;5.0&quot;,
@@ -189,6 +195,12 @@ homie/5/lawn-water/lawn-valve/value  → &quot;false&quot;
         &quot;retained&quot;: true,
         &quot;type&quot;: &quot;boolean&quot;,
         &quot;format&quot;: &quot;close,open&quot;
+      },
+      &quot;action&quot;: {
+        &quot;settable&quot;: true,
+        &quot;retained&quot;: false,
+        &quot;type&quot;: &quot;enum&quot;,
+        &quot;format&quot;: &quot;toggle&quot;
       },
       &quot;switch-time&quot;: {
         &quot;settable&quot;: true,
@@ -283,6 +295,24 @@ homie/5/lawn-water/lawn-valve/auto-enable   → &quot;0&quot;
 </tbody>
 </table>
 <h3 id="optional-properties">Optional properties</h3>
+<h4 id="action">action</h4>
+<p>The <code>action</code> property (optional) is an embedded <a href="../cap-action/#homie-action10"><code>homie-action/1/0</code> capability</a>. It supports the following actions:</p>
+<table>
+<thead>
+<tr>
+<th>action</th>
+<th>required</th>
+<th>behaviour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>toggle</code></td>
+<td>no</td>
+<td>Will toggle the state of the <a href="#value"><code>value</code> property</a>.</td>
+</tr>
+</tbody>
+</table>
 <h4 id="switch-time">switch-time</h4>
 <p>The <code>switch-time</code> property (optional) determines the time required for a switch to completely switch state. For most
 electrical switches this value is <code>0</code>, indicating it switches instantaneously. For a valve however this will
