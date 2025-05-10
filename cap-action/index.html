@@ -43,12 +43,28 @@
                 <li class="toctree-l1"><a class="reference internal" href="..">Introduction to Homie Profiles</a>
                 </li>
               </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../dev-sensor/">Device: Sensor</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../dev-power-switch/">Device: Power Switch</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../dev-light-dimmable/">Device: Dimmable Light</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../dev-shutter/">Device: Shutter</a>
+                </li>
+              </ul>
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Capability: Action</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#action-introduction">Action introduction</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#explicit-vs-embedded">Explicit vs embedded</a>
+    <li class="toctree-l3"><a class="reference internal" href="#devices-vs-nodes">Devices vs Nodes</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#examples">Examples</a>
         <ul>
@@ -87,6 +103,10 @@
               </ul>
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../cap-switch/">Capability: Switch</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../cap-level/">Capability: Level-actor</a>
                 </li>
               </ul>
               <ul>
@@ -134,15 +154,10 @@
 <li>pass <code>100</code> to the <code>set</code> attribute of the property that holds the curent state. This will set the <strong>absolute</strong> value of that dimmer to <code>100%</code>.</li>
 </ul>
 <p>However, not all interactions can be modeled that way. For example if we want to 'step-up' or 'step-down' the dimmer value. In either case the new state value will be relative to the previous state. For cases like this the <code>action</code> capability can be used.</p>
-<p><strong>Caution</strong>: the preferred way with Homie devices is to use state-based controls. Only use actions if there is no way to do it state-based. For example don't used actions <code>on</code>, <code>off</code>, and <code>toggle</code>, but model <code>on</code>/<code>off</code> as state, and only <code>toggle</code> as an action.</p>
-<h3 id="explicit-vs-embedded">Explicit vs embedded</h3>
-<p>The actions may be scoped on Node level or Device level. Meaning:</p>
-<ul>
-<li><strong>Node level:</strong> An action impacts only a specific node.</li>
-<li><strong>Device level</strong>: An action impacts multiple Nodes within a device.</li>
-</ul>
-<p>This action capability is specified and advertized if used on a Device explicitly, as a separate Node.
-If the action is used on a Node level, it can be embedded in other capabilities. See the <a href="../cap-switch/#action"><code>homie-switch/1/0</code> capability</a> for exmaple.</p>
+<p><strong>Caution</strong>: the preferred way with Homie devices is to use state-based controls. Only use actions if there is no way to do it state-based. For example don't use actions <code>on</code>, <code>off</code>, and <code>toggle</code>, but model <code>on</code>/<code>off</code> as state, and only <code>toggle</code> as an action.</p>
+<h3 id="devices-vs-nodes">Devices vs Nodes</h3>
+<p>The actions typically apply to nodes. Hence the capability-profiles list the actions available for a node. However the action-node is usually implemented on a Device level. This allows the action to have a wider scope and be used for multiple nodes. For example a <code>level</code> capability has 2 actions; <code>step-up</code> and <code>step-down</code>. And a <code>power-switch</code> has a <code>toggle</code> action. So a <code>homie-light-dimmable</code> device gets all three actions; <code>step-up</code>, <code>step-down</code>, and <code>toggle</code>. The <code>step-up</code> and <code>step-down</code> actions act on the <code>brightness</code> node, while the <code>toggle</code> action acts on the <code>power</code> node.</p>
+<p>Devices can define additional actions not bound to a specific node. Additionally a device MAY rename actions in case of naming colissions.</p>
 <h3 id="examples">Examples</h3>
 <p>A Homie device with 1 node as an action.</p>
 <h4 id="example">Example</h4>
@@ -161,7 +176,7 @@ If the action is used on a Node level, it can be embedded in other capabilities.
         &quot;settable&quot;: true,
         &quot;retained&quot;: false,
         &quot;type&quot;: &quot;enum&quot;,
-        &quot;format&quot;: &quot;dim,brigten,toggle&quot;
+        &quot;format&quot;: &quot;step-down,step-up,toggle&quot;
       }
     }
 
@@ -221,7 +236,7 @@ homie/5/my-light/actions/$profile/homie-action/1 → &quot;0&quot;
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href=".." class="btn btn-neutral float-left" title="Introduction to Homie Profiles"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../dev-shutter/" class="btn btn-neutral float-left" title="Device: Shutter"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../cap-inputs/" class="btn btn-neutral float-right" title="Capability: Inputs">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
@@ -245,7 +260,7 @@ homie/5/my-light/actions/$profile/homie-action/1 → &quot;0&quot;
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../dev-shutter/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../cap-inputs/" style="color: #fcfcfc">Next &raquo;</a></span>
