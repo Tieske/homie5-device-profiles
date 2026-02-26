@@ -32,7 +32,7 @@ Description:
         "value": {
           "settable": true,
           "retained": true,
-          "type": "boolean",
+          "datatype": "boolean",
           "format": "close,open"
         }
       }
@@ -71,41 +71,41 @@ Description:
         "value": {
           "settable": true,
           "retained": true,
-          "type": "boolean",
+          "datatype": "boolean",
           "format": "close,open"
         },
         "switch-time": {
           "settable": true,
           "retained": true,
-          "type": "float",
+          "datatype": "float",
           "format": "0:",
           "unit": "s"
         },
         "enable-time": {
           "settable": true,
           "retained": true,
-          "type": "float",
+          "datatype": "float",
           "format": "0:",
           "unit": "s"
         },
         "disable-time": {
           "settable": true,
           "retained": true,
-          "type": "float",
+          "datatype": "float",
           "format": "0:",
           "unit": "s"
         },
         "auto-disable": {
           "settable": true,
           "retained": true,
-          "type": "float",
+          "datatype": "float",
           "format": "0:",
           "unit": "s"
         },
         "auto-enable": {
           "settable": true,
           "retained": true,
-          "type": "float",
+          "datatype": "float",
           "format": "0:",
           "unit": "s"
         }

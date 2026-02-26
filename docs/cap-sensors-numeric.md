@@ -155,7 +155,7 @@ settable | `false` | virtual sensors can set the `raw` property.
 retained | `true` |
 unit |  | the `unit` attribute on this property MUST be specified, see the Homie specification for most common supported units.
 format |  | the `format` attribute SHOULD be specified for precision, minimum and maximum values.
-type | "`float`" | To represent integers, us the `format` attribute
+datatype | "`float`" | To represent integers, use the `format` attribute
 
 If any of the calibration properties are present, then the value is calculated as:
 
@@ -176,7 +176,7 @@ attributes | value | remark
 property-id | "`raw`" |
 settable | `true`/`false` | mostly non-settable, except for virtual sensors.
 retained | `true` |
-type | `float` |
+datatype | `float` |
 unit |  | Can be any unit, but most likely the same as the `value` property (or a corresponding type, eg. `°F` as the `raw` type, with `°C` as the `value` type)
 
 
@@ -193,7 +193,7 @@ attributes | value | remark
 property-id | "`raw-topic`" |
 settable | `true` |
 retained | `true` |
-type | `string` |
+datatype | `string` |
 unit |  |
 
 #### offset
@@ -205,7 +205,7 @@ attributes | value | remark
 property-id | "`offset`" |
 settable | `true` |
 retained | `true` |
-type | `float` |
+datatype | `float` |
 unit |  |
 
 #### factor
@@ -217,7 +217,7 @@ attributes | value | remark
 property-id | "`factor`" |
 settable | `true` |
 retained | `true` |
-type | `float` |
+datatype | `float` |
 unit |  |
 
 
@@ -385,7 +385,7 @@ Measures carbon dioxide, the profile name is: `homie-sensor-gas-co2/1/0`
 The implementation is identical to the [`homie-sensor-numeric/1/0`](#homie-sensor-numeric10) capability with the
 following modifications:
 
-- the `units` attribute of the `value` property MUST be `"ppm"`.
+- the `unit` attribute of the `value` property MUST be `"ppm"`.
 
 Converting the value into other units for display is considered a [UI responsibility](#unit-conversions).
 
@@ -397,7 +397,7 @@ Measures methane, the profile name is: `homie-sensor-gas-ch4/1/0`
 The implementation is identical to the [`homie-sensor-numeric/1/0`](#homie-sensor-numeric10) capability with the
 following modifications:
 
-- the `units` attribute of the `value` property MUST be `"ppm"`.
+- the `unit` attribute of the `value` property MUST be `"ppm"`.
 
 Converting the value into other units for display is considered a [UI responsibility](#unit-conversions).
 
@@ -409,7 +409,7 @@ Measures volatile organic compounds, the profile name is: `homie-sensor-gas-voc/
 The implementation is identical to the [`homie-sensor-numeric/1/0`](#homie-sensor-numeric10) capability with the
 following modifications:
 
-- the `units` attribute of the `value` property MUST be `"ppm"`.
+- the `unit` attribute of the `value` property MUST be `"ppm"`.
 
 Converting the value into other units for display is considered a [UI responsibility](#unit-conversions).
 
@@ -421,7 +421,7 @@ Measures relative air humidity, the profile name is: `homie-sensor-humidity/1/0`
 The implementation is identical to the [`homie-sensor-numeric/1/0`](#homie-sensor-numeric10) capability with the
 following modifications:
 
-- the `units` attribute of the `value` property MUST be `"%"`.
+- the `unit` attribute of the `value` property MUST be `"%"`.
 
 Converting the value into other units for display is considered a [UI responsibility](#unit-conversions).
 

@@ -30,7 +30,7 @@ Description:
         "value": {
           "settable": true,
           "retained": true,
-          "type": "float",
+          "datatype": "float",
           "format": "0:100"
         }
       }
@@ -69,34 +69,34 @@ Description:
         "value": {
           "settable": true,
           "retained": true,
-          "type": "float",
+          "datatype": "float",
           "format": "0:100:1",
           "unit": "%"
         },
         "step-size": {
           "settable": true,
           "retained": true,
-          "type": "float",
+          "datatype": "float",
           "format": "1:100:1"
         },
         "transition-time": {
           "settable": true,
           "retained": true,
-          "type": "float",
+          "datatype": "float",
           "format": "0:",
           "unit": "s"
         },
         "minimum": {
           "settable": true,
           "retained": true,
-          "type": "float",
+          "datatype": "float",
           "format": "0:100:1",
           "unit": "%"
         },
         "maximum": {
           "settable": true,
           "retained": true,
-          "type": "float",
+          "datatype": "float",
           "format": "0:100:1",
           "unit": "%"
         }
@@ -136,7 +136,7 @@ property-id | "`value`" |
 settable | `true` |
 retained | `true` |
 format | | the `format` attribute MUST set minimum and maximum, precision MAY be set.
-type | "`float`" |
+datatype | "`float`" |
 unit | | the unit attribute MAY be specified. It is recommended to use a unit, but not required.
 
 
@@ -152,7 +152,7 @@ property-id | "`step-size`" |
 settable | `true` |
 retained | `true` |
 format | | the `format` attribute MUST be specified. See details below.
-type | "`float`" |
+datatype | "`float`" |
 unit | | the unit attribute MUST be the same as the `value` property.
 
 The `format` attribute:
@@ -173,7 +173,7 @@ attributes | value | remark
 property-id | "`transition-time`" |
 settable | `true` |
 retained | `true` |
-type | "`float`" |
+datatype | "`float`" |
 format | "`0:`" | Value must be 0 or more
 unit | `"s"` | The time is provided in seconds
 
@@ -200,7 +200,7 @@ attributes | value | remark
 property-id | "`minimum`" |
 settable | `true` |
 retained | `true` |
-type | "`float`" |
+datatype | "`float`" |
 format | | the minimum and maximum MUST be specified in the `format` attribute. It MUST be the same as for the `maximum` property.
 unit | | Optional. It does not have to be the same unit as the `value` property, but MUST be the same as the `maximum` property.
 
@@ -217,7 +217,7 @@ attributes | value | remark
 property-id | "`maximum`" |
 settable | `true` |
 retained | `true` |
-type | "`float`" |
+datatype | "`float`" |
 format | | the minimum and maximum MUST be specified in the `format` attribute. It MUST be the same as for the `minimum` property.
 unit | | Optional. It does not have to be the same unit as the `value` property, but MUST be the same as the `minimum` property.
 
