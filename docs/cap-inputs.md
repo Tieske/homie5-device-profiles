@@ -40,11 +40,13 @@ Description:
     "living-motion": {
       "$profile": ["homie-input-presence/1/0"],
       "name": "Motion detected",
-      "value": {
-        "settable": true,
-        "retained": true,
-        "type": "boolean",
-        "format": "no-presence,presence"
+      "properties": {
+        "value": {
+          "settable": true,
+          "retained": true,
+          "datatype": "boolean",
+          "format": "no-presence,presence"
+        }
       }
     }
 
@@ -77,32 +79,34 @@ Description:
     "livingroom": {
       "$profile": ["homie-input-presence/1/0"],
       "name": "Motion detected",
-      "value": {
-        "settable": false,
-        "retained": true,
-        "type": "boolean",
-        "format": "no-presence,presence"
-      },
-      "raw": {
-        "settable": true,
-        "retained": true,
-        "type": "boolean"
-      },
-      "raw-topic": {
-        "settable": true,
-        "retained": true,
-        "type": "string"
-      },
-      "topic-falsy": {
-        "settable": true,
-        "retained": true,
-        "type": "string"
-      },
-      "invert": {
-        "settable": true,
-        "retained": true,
-        "type": "boolean",
-        "format": "no,yes"
+      "properties": {
+        "value": {
+          "settable": false,
+          "retained": true,
+          "datatype": "boolean",
+          "format": "no-presence,presence"
+        },
+        "raw": {
+          "settable": true,
+          "retained": true,
+          "datatype": "boolean"
+        },
+        "raw-topic": {
+          "settable": true,
+          "retained": true,
+          "datatype": "string"
+        },
+        "topic-falsy": {
+          "settable": true,
+          "retained": true,
+          "datatype": "string"
+        },
+        "invert": {
+          "settable": true,
+          "retained": true,
+          "datatype": "boolean",
+          "format": "no,yes"
+        }
       }
 
     }

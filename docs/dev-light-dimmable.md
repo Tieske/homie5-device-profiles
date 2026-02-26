@@ -35,7 +35,7 @@ Description:
         "value": {
           "settable": true,
           "retained": true,
-          "type": "color",
+          "datatype": "color",
           "format": "rgb"
         }
       }
@@ -53,14 +53,14 @@ Description:
         "value": {
           "settable": true,
           "retained": true,
-          "type": "float",
+          "datatype": "float",
           "format": "1:100",
           "unit": "%"
         },
         "delay": {
           "settable": true,
           "retained": true,
-          "type": "float",
+          "datatype": "float",
           "format": "0:",
           "unit": "s"
         }
@@ -144,7 +144,7 @@ attributes | value | remark
 property-id | "`value`" |
 settable | `true` |
 retained | `true` |
-type | "`color`" |
+datatype | "`color`" |
 format | | the standard `format` for colors. It MUST include `rgb`, other color formats MAY be specified in addition.
 
 Upon updating the value, the `brightness` property MUST be updated accordingly if the value is set as an `rgb` or `hsv` value (since they include brightness information).
@@ -177,7 +177,7 @@ property-id | "`value`" |
 settable | `true` |
 retained | `true` |
 format | `1:100` | the `format` attribute MUST set minimum (1) and maximum (100), precision MAY be set.
-type | "`float`" |
+datatype | "`float`" |
 unit | `%` | the unit attribute MUST be `%` to match the brightness property
 
 #### Property: delay
@@ -191,5 +191,5 @@ property-id | "`delay`" |
 settable | `true` |
 retained | `true` |
 format | `0:` | the `format` attribute MUST set minimum (0) and MAY set maximum and precision.
-type | "`float`" |
+datatype | "`float`" |
 unit | `s` | the delay is specified in seconds

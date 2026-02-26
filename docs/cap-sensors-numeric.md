@@ -28,12 +28,14 @@ Description:
     "engine-temp": {
       "$profile": ["homie-sensor-temperature/1/0"],
       "name": "Engine temperature",
-      "value": {
-        "settable": false,
-        "retained": true,
-        "unit": "°C",
-        "type": "float",
-        "format": "0:40:0.5",
+      "properties": {
+        "value": {
+          "settable": false,
+          "retained": true,
+          "unit": "°C",
+          "datatype": "float",
+          "format": "0:40:0.5"
+        }
       }
     }
 
@@ -66,34 +68,36 @@ Description:
     "engine-temp": {
       "$profile": ["homie-sensor-temperature/1/0"],
       "name": "Engine temperature",
-      "value": {
-        "settable": false,
-        "retained": true,
-        "unit": "°C",
-        "type": "float",
-        "format": "0:120:0.5"
-      },
-      "raw": {
-        "settable": true,
-        "retained": true,
-        "unit": "°F",
-        "type": "float",
-        "format": "0:248"
-      },
-      "raw-topic": {
-        "settable": true,
-        "retained": true,
-        "type": "string"
-      },
-      "offset": {
-        "settable": true,
-        "retained": true,
-        "type": "float"
-      },
-      "factor": {
-        "settable": true,
-        "retained": true,
-        "type": "float"
+      "properties": {
+        "value": {
+          "settable": false,
+          "retained": true,
+          "unit": "°C",
+          "datatype": "float",
+          "format": "0:120:0.5"
+        },
+        "raw": {
+          "settable": true,
+          "retained": true,
+          "unit": "°F",
+          "datatype": "float",
+          "format": "0:248"
+        },
+        "raw-topic": {
+          "settable": true,
+          "retained": true,
+          "datatype": "string"
+        },
+        "offset": {
+          "settable": true,
+          "retained": true,
+          "datatype": "float"
+        },
+        "factor": {
+          "settable": true,
+          "retained": true,
+          "datatype": "float"
+        }
       }
 
     }
@@ -225,7 +229,7 @@ The profile name is: `homie-sensor-temperature/1/0`
 The implementation is identical to the [`homie-sensor-numeric/1/0`](#homie-sensor-numeric10) capability with the
 following modifications:
 
-- the `units` attribute of the `value` property MUST be `"°C"`.
+- the `unit` attribute of the `value` property MUST be `"°C"`.
 
 Converting the value into other units, like `"°F"`, for display is considered a [UI responsibility](#unit-conversions).
 
@@ -237,7 +241,7 @@ The profile name is: `homie-sensor-volume/1/0`
 The implementation is identical to the [`homie-sensor-numeric/1/0`](#homie-sensor-numeric10) capability with the
 following modifications:
 
-- the `units` attribute of the `value` property MUST be `"L"`.
+- the `unit` attribute of the `value` property MUST be `"L"`.
 
 Converting the value into other units for display is considered a [UI responsibility](#unit-conversions).
 
@@ -249,7 +253,7 @@ The profile name is: `homie-sensor-volt/1/0`
 The implementation is identical to the [`homie-sensor-numeric/1/0`](#homie-sensor-numeric10) capability with the
 following modifications:
 
-- the `units` attribute of the `value` property MUST be `"V"`.
+- the `unit` attribute of the `value` property MUST be `"V"`.
 
 Converting the value into other units for display is considered a [UI responsibility](#unit-conversions).
 
@@ -261,7 +265,7 @@ The profile name is: `homie-sensor-current/1/0`
 The implementation is identical to the [`homie-sensor-numeric/1/0`](#homie-sensor-numeric10) capability with the
 following modifications:
 
-- the `units` attribute of the `value` property MUST be `"A"`.
+- the `unit` attribute of the `value` property MUST be `"A"`.
 
 Converting the value into other units for display is considered a [UI responsibility](#unit-conversions).
 
@@ -273,7 +277,7 @@ The profile name is: `homie-sensor-power/1/0`
 The implementation is identical to the [`homie-sensor-numeric/1/0`](#homie-sensor-numeric10) capability with the
 following modifications:
 
-- the `units` attribute of the `value` property MUST be `"W"`.
+- the `unit` attribute of the `value` property MUST be `"W"`.
 
 Converting the value into other units for display is considered a [UI responsibility](#unit-conversions).
 
@@ -285,7 +289,7 @@ The profile name is: `homie-sensor-energy/1/0`
 The implementation is identical to the [`homie-sensor-numeric/1/0`](#homie-sensor-numeric10) capability with the
 following modifications:
 
-- the `units` attribute of the `value` property MUST be `"kWh"`.
+- the `unit` attribute of the `value` property MUST be `"kWh"`.
 
 Converting the value into other units for display is considered a [UI responsibility](#unit-conversions).
 
@@ -297,7 +301,7 @@ The profile name is: `homie-sensor-frequency/1/0`
 The implementation is identical to the [`homie-sensor-numeric/1/0`](#homie-sensor-numeric10) capability with the
 following modifications:
 
-- the `units` attribute of the `value` property MUST be `"Hz"`.
+- the `unit` attribute of the `value` property MUST be `"Hz"`.
 
 Converting the value into other units for display is considered a [UI responsibility](#unit-conversions).
 
@@ -309,7 +313,7 @@ The profile name is: `homie-sensor-battery/1/0`
 The implementation is identical to the [`homie-sensor-numeric/1/0`](#homie-sensor-numeric10) capability with the
 following modifications:
 
-- the `units` attribute of the `value` property MUST be `"%"`.
+- the `unit` attribute of the `value` property MUST be `"%"`.
 
 Converting the value into other units for display is considered a [UI responsibility](#unit-conversions).
 
@@ -321,7 +325,7 @@ The profile name is: `homie-sensor-distance/1/0`
 The implementation is identical to the [`homie-sensor-numeric/1/0`](#homie-sensor-numeric10) capability with the
 following modifications:
 
-- the `units` attribute of the `value` property MUST be `"m"`.
+- the `unit` attribute of the `value` property MUST be `"m"`.
 
 Converting the value into other units for display is considered a [UI responsibility](#unit-conversions).
 
@@ -333,7 +337,7 @@ The profile name is: `homie-sensor-speed/1/0`
 The implementation is identical to the [`homie-sensor-numeric/1/0`](#homie-sensor-numeric10) capability with the
 following modifications:
 
-- the `units` attribute of the `value` property MUST be `"m/s"`.
+- the `unit` attribute of the `value` property MUST be `"m/s"`.
 
 Converting the value into other units for display is considered a [UI responsibility](#unit-conversions).
 
@@ -345,7 +349,7 @@ The profile name is: `homie-sensor-pressure/1/0`
 The implementation is identical to the [`homie-sensor-numeric/1/0`](#homie-sensor-numeric10) capability with the
 following modifications:
 
-- the `units` attribute of the `value` property MUST be `"Pa"`.
+- the `unit` attribute of the `value` property MUST be `"Pa"`.
 
 Converting the value into other units for display is considered a [UI responsibility](#unit-conversions).
 
@@ -357,7 +361,7 @@ The profile name is: `homie-sensor-light/1/0`
 The implementation is identical to the [`homie-sensor-numeric/1/0`](#homie-sensor-numeric10) capability with the
 following modifications:
 
-- the `units` attribute of the `value` property MUST be `"lx"`.
+- the `unit` attribute of the `value` property MUST be `"lx"`.
 
 Converting the value into other units for display is considered a [UI responsibility](#unit-conversions).
 
@@ -369,7 +373,7 @@ Measures carbon monoxide, the profile name is: `homie-sensor-gas-co/1/0`
 The implementation is identical to the [`homie-sensor-numeric/1/0`](#homie-sensor-numeric10) capability with the
 following modifications:
 
-- the `units` attribute of the `value` property MUST be `"ppm"`.
+- the `unit` attribute of the `value` property MUST be `"ppm"`.
 
 Converting the value into other units for display is considered a [UI responsibility](#unit-conversions).
 

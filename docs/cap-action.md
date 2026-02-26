@@ -41,11 +41,13 @@ Description:
     "actions": {
       "$profile": ["homie-action/1/0"],
       "name": "Light actions",
-      "action": {
-        "settable": true,
-        "retained": false,
-        "type": "enum",
-        "format": "step-down,step-up,toggle"
+      "properties": {
+        "action": {
+          "settable": true,
+          "retained": false,
+          "datatype": "enum",
+          "format": "step-down,step-up,toggle"
+        }
       }
     }
 
