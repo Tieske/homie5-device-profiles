@@ -181,11 +181,13 @@
     &quot;lawn-valve&quot;: {
       &quot;$profile&quot;: [&quot;homie-valve/1/0&quot;],
       &quot;name&quot;: &quot;Lawn valve&quot;,
-      &quot;value&quot;: {
-        &quot;settable&quot;: true,
-        &quot;retained&quot;: true,
-        &quot;type&quot;: &quot;boolean&quot;,
-        &quot;format&quot;: &quot;close,open&quot;
+      &quot;properties&quot;: {
+        &quot;value&quot;: {
+          &quot;settable&quot;: true,
+          &quot;retained&quot;: true,
+          &quot;type&quot;: &quot;boolean&quot;,
+          &quot;format&quot;: &quot;close,open&quot;
+        }
       }
     }
 
@@ -210,46 +212,48 @@ homie/5/lawn-water/lawn-valve/value  → &quot;false&quot;
     &quot;lawn-valve&quot;: {
       &quot;$profile&quot;: [&quot;homie-valve/1/0&quot;],
       &quot;name&quot;: &quot;Lawn valve&quot;,
-      &quot;value&quot;: {
-        &quot;settable&quot;: true,
-        &quot;retained&quot;: true,
-        &quot;type&quot;: &quot;boolean&quot;,
-        &quot;format&quot;: &quot;close,open&quot;
-      },
-      &quot;switch-time&quot;: {
-        &quot;settable&quot;: true,
-        &quot;retained&quot;: true,
-        &quot;type&quot;: &quot;float&quot;,
-        &quot;format&quot;: &quot;0:&quot;,
-        &quot;unit&quot;: &quot;s&quot;
-      },
-      &quot;enable-time&quot;: {
-        &quot;settable&quot;: true,
-        &quot;retained&quot;: true,
-        &quot;type&quot;: &quot;float&quot;,
-        &quot;format&quot;: &quot;0:&quot;,
-        &quot;unit&quot;: &quot;s&quot;
-      },
-      &quot;disable-time&quot;: {
-        &quot;settable&quot;: true,
-        &quot;retained&quot;: true,
-        &quot;type&quot;: &quot;float&quot;,
-        &quot;format&quot;: &quot;0:&quot;,
-        &quot;unit&quot;: &quot;s&quot;
-      },
-      &quot;auto-disable&quot;: {
-        &quot;settable&quot;: true,
-        &quot;retained&quot;: true,
-        &quot;type&quot;: &quot;float&quot;,
-        &quot;format&quot;: &quot;0:&quot;,
-        &quot;unit&quot;: &quot;s&quot;
-      },
-      &quot;auto-enable&quot;: {
-        &quot;settable&quot;: true,
-        &quot;retained&quot;: true,
-        &quot;type&quot;: &quot;float&quot;,
-        &quot;format&quot;: &quot;0:&quot;,
-        &quot;unit&quot;: &quot;s&quot;
+      &quot;properties&quot;: {
+        &quot;value&quot;: {
+          &quot;settable&quot;: true,
+          &quot;retained&quot;: true,
+          &quot;type&quot;: &quot;boolean&quot;,
+          &quot;format&quot;: &quot;close,open&quot;
+        },
+        &quot;switch-time&quot;: {
+          &quot;settable&quot;: true,
+          &quot;retained&quot;: true,
+          &quot;type&quot;: &quot;float&quot;,
+          &quot;format&quot;: &quot;0:&quot;,
+          &quot;unit&quot;: &quot;s&quot;
+        },
+        &quot;enable-time&quot;: {
+          &quot;settable&quot;: true,
+          &quot;retained&quot;: true,
+          &quot;type&quot;: &quot;float&quot;,
+          &quot;format&quot;: &quot;0:&quot;,
+          &quot;unit&quot;: &quot;s&quot;
+        },
+        &quot;disable-time&quot;: {
+          &quot;settable&quot;: true,
+          &quot;retained&quot;: true,
+          &quot;type&quot;: &quot;float&quot;,
+          &quot;format&quot;: &quot;0:&quot;,
+          &quot;unit&quot;: &quot;s&quot;
+        },
+        &quot;auto-disable&quot;: {
+          &quot;settable&quot;: true,
+          &quot;retained&quot;: true,
+          &quot;type&quot;: &quot;float&quot;,
+          &quot;format&quot;: &quot;0:&quot;,
+          &quot;unit&quot;: &quot;s&quot;
+        },
+        &quot;auto-enable&quot;: {
+          &quot;settable&quot;: true,
+          &quot;retained&quot;: true,
+          &quot;type&quot;: &quot;float&quot;,
+          &quot;format&quot;: &quot;0:&quot;,
+          &quot;unit&quot;: &quot;s&quot;
+        }
       }
 
     }
