@@ -344,9 +344,9 @@ profile takes this into account by allowing the (raw) value to be settable in th
 <td>the <code>format</code> attribute SHOULD be specified for precision, minimum and maximum values.</td>
 </tr>
 <tr>
-<td>type</td>
+<td>datatype</td>
 <td>"<code>float</code>"</td>
-<td>To represent integers, us the <code>format</code> attribute</td>
+<td>To represent integers, use the <code>format</code> attribute</td>
 </tr>
 </tbody>
 </table>
@@ -383,7 +383,7 @@ profile takes this into account by allowing the (raw) value to be settable in th
 <td></td>
 </tr>
 <tr>
-<td>type</td>
+<td>datatype</td>
 <td><code>float</code></td>
 <td></td>
 </tr>
@@ -424,7 +424,7 @@ and received a value on its "<code>/set</code>" topic. If the value is set to an
 <td></td>
 </tr>
 <tr>
-<td>type</td>
+<td>datatype</td>
 <td><code>string</code></td>
 <td></td>
 </tr>
@@ -462,7 +462,7 @@ and received a value on its "<code>/set</code>" topic. If the value is set to an
 <td></td>
 </tr>
 <tr>
-<td>type</td>
+<td>datatype</td>
 <td><code>float</code></td>
 <td></td>
 </tr>
@@ -500,7 +500,7 @@ and received a value on its "<code>/set</code>" topic. If the value is set to an
 <td></td>
 </tr>
 <tr>
-<td>type</td>
+<td>datatype</td>
 <td><code>float</code></td>
 <td></td>
 </tr>
@@ -620,7 +620,7 @@ following modifications:</p>
 <p>The implementation is identical to the <a href="#homie-sensor-numeric10"><code>homie-sensor-numeric/1/0</code></a> capability with the
 following modifications:</p>
 <ul>
-<li>the <code>units</code> attribute of the <code>value</code> property MUST be <code>"ppm"</code>.</li>
+<li>the <code>unit</code> attribute of the <code>value</code> property MUST be <code>"ppm"</code>.</li>
 </ul>
 <p>Converting the value into other units for display is considered a <a href="#unit-conversions">UI responsibility</a>.</p>
 <h2 id="homie-sensor-gas-ch410">homie-sensor-gas-ch4/1/0</h2>
@@ -628,7 +628,7 @@ following modifications:</p>
 <p>The implementation is identical to the <a href="#homie-sensor-numeric10"><code>homie-sensor-numeric/1/0</code></a> capability with the
 following modifications:</p>
 <ul>
-<li>the <code>units</code> attribute of the <code>value</code> property MUST be <code>"ppm"</code>.</li>
+<li>the <code>unit</code> attribute of the <code>value</code> property MUST be <code>"ppm"</code>.</li>
 </ul>
 <p>Converting the value into other units for display is considered a <a href="#unit-conversions">UI responsibility</a>.</p>
 <h2 id="homie-sensor-gas-voc10">homie-sensor-gas-voc/1/0</h2>
@@ -636,7 +636,7 @@ following modifications:</p>
 <p>The implementation is identical to the <a href="#homie-sensor-numeric10"><code>homie-sensor-numeric/1/0</code></a> capability with the
 following modifications:</p>
 <ul>
-<li>the <code>units</code> attribute of the <code>value</code> property MUST be <code>"ppm"</code>.</li>
+<li>the <code>unit</code> attribute of the <code>value</code> property MUST be <code>"ppm"</code>.</li>
 </ul>
 <p>Converting the value into other units for display is considered a <a href="#unit-conversions">UI responsibility</a>.</p>
 <h2 id="homie-sensor-humidity10">homie-sensor-humidity/1/0</h2>
@@ -644,7 +644,7 @@ following modifications:</p>
 <p>The implementation is identical to the <a href="#homie-sensor-numeric10"><code>homie-sensor-numeric/1/0</code></a> capability with the
 following modifications:</p>
 <ul>
-<li>the <code>units</code> attribute of the <code>value</code> property MUST be <code>"%"</code>.</li>
+<li>the <code>unit</code> attribute of the <code>value</code> property MUST be <code>"%"</code>.</li>
 </ul>
 <p>Converting the value into other units for display is considered a <a href="#unit-conversions">UI responsibility</a>.</p>
 <h2 id="unit-conversions">Unit conversions</h2>
