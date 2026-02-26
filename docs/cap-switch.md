@@ -28,11 +28,13 @@ Description:
     "lawn-valve": {
       "$profile": ["homie-valve/1/0"],
       "name": "Lawn valve",
-      "value": {
-        "settable": true,
-        "retained": true,
-        "type": "boolean",
-        "format": "close,open"
+      "properties": {
+        "value": {
+          "settable": true,
+          "retained": true,
+          "type": "boolean",
+          "format": "close,open"
+        }
       }
     }
 
@@ -65,46 +67,48 @@ Description:
     "lawn-valve": {
       "$profile": ["homie-valve/1/0"],
       "name": "Lawn valve",
-      "value": {
-        "settable": true,
-        "retained": true,
-        "type": "boolean",
-        "format": "close,open"
-      },
-      "switch-time": {
-        "settable": true,
-        "retained": true,
-        "type": "float",
-        "format": "0:",
-        "unit": "s"
-      },
-      "enable-time": {
-        "settable": true,
-        "retained": true,
-        "type": "float",
-        "format": "0:",
-        "unit": "s"
-      },
-      "disable-time": {
-        "settable": true,
-        "retained": true,
-        "type": "float",
-        "format": "0:",
-        "unit": "s"
-      },
-      "auto-disable": {
-        "settable": true,
-        "retained": true,
-        "type": "float",
-        "format": "0:",
-        "unit": "s"
-      },
-      "auto-enable": {
-        "settable": true,
-        "retained": true,
-        "type": "float",
-        "format": "0:",
-        "unit": "s"
+      "properties": {
+        "value": {
+          "settable": true,
+          "retained": true,
+          "type": "boolean",
+          "format": "close,open"
+        },
+        "switch-time": {
+          "settable": true,
+          "retained": true,
+          "type": "float",
+          "format": "0:",
+          "unit": "s"
+        },
+        "enable-time": {
+          "settable": true,
+          "retained": true,
+          "type": "float",
+          "format": "0:",
+          "unit": "s"
+        },
+        "disable-time": {
+          "settable": true,
+          "retained": true,
+          "type": "float",
+          "format": "0:",
+          "unit": "s"
+        },
+        "auto-disable": {
+          "settable": true,
+          "retained": true,
+          "type": "float",
+          "format": "0:",
+          "unit": "s"
+        },
+        "auto-enable": {
+          "settable": true,
+          "retained": true,
+          "type": "float",
+          "format": "0:",
+          "unit": "s"
+        }
       }
 
     }

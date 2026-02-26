@@ -26,11 +26,13 @@ Description:
     "table-top-kitchen": {
       "$profile": ["homie-level/1/0"],
       "name": "brightness",
-      "value": {
-        "settable": true,
-        "retained": true,
-        "type": "float",
-        "format": "0:100"
+      "properties": {
+        "value": {
+          "settable": true,
+          "retained": true,
+          "type": "float",
+          "format": "0:100"
+        }
       }
     }
 
@@ -63,39 +65,41 @@ Description:
     "table-top-kitchen": {
       "$profile": ["homie-level/1/0"],
       "name": "brightness",
-      "value": {
-        "settable": true,
-        "retained": true,
-        "type": "float",
-        "format": "0:100:1",
-        "unit": "%"
-      },
-      "step-size": {
-        "settable": true,
-        "retained": true,
-        "type": "float",
-        "format": "1:100:1"
-      },
-      "transition-time": {
-        "settable": true,
-        "retained": true,
-        "type": "float",
-        "format": "0:",
-        "unit": "s"
-      },
-      "minimum": {
-        "settable": true,
-        "retained": true,
-        "type": "float",
-        "format": "0:100:1",
-        "unit": "%"
-      },
-      "maximum": {
-        "settable": true,
-        "retained": true,
-        "type": "float",
-        "format": "0:100:1",
-        "unit": "%"
+      "properties": {
+        "value": {
+          "settable": true,
+          "retained": true,
+          "type": "float",
+          "format": "0:100:1",
+          "unit": "%"
+        },
+        "step-size": {
+          "settable": true,
+          "retained": true,
+          "type": "float",
+          "format": "1:100:1"
+        },
+        "transition-time": {
+          "settable": true,
+          "retained": true,
+          "type": "float",
+          "format": "0:",
+          "unit": "s"
+        },
+        "minimum": {
+          "settable": true,
+          "retained": true,
+          "type": "float",
+          "format": "0:100:1",
+          "unit": "%"
+        },
+        "maximum": {
+          "settable": true,
+          "retained": true,
+          "type": "float",
+          "format": "0:100:1",
+          "unit": "%"
+        }
       }
     }
 
