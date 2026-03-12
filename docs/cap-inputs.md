@@ -160,6 +160,6 @@ Input capability          | based on sensor type
 --------------------------|---------------------
 `homie-input-binary`      |[`homie-sensor-binary`](cap-sensors-binary.md#homie-sensor-binary10)
 `homie-input-power-switch`|[`homie-sensor-power-switch`](cap-sensors-binary.md#homie-sensor-power-switch10)
-`homie-input-window`      |[`homie-sensor-window`](cap-sensors-binary.md#homie-sensor-window10)
+`homie-input-contact`     |[`homie-sensor-contact`](cap-sensors-binary.md#homie-sensor-contact10)
 `homie-input-valve`       |[`homie-sensor-valve`](cap-sensors-binary.md#homie-sensor-valve10)
 `homie-input-presence`    |[`homie-sensor-presence`](cap-sensors-binary.md#homie-sensor-presence10)

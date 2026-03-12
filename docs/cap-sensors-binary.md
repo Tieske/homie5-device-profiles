@@ -217,9 +217,11 @@ following modifications:
 - the `format` attribute of the `value` property MUST be `"off,on"`.
 
 
-## homie-sensor-window/1/0
+## homie-sensor-contact/1/0
 
-The profile name is: `homie-sensor-window/1/0`
+A contact sensor is typically used for doors and windows, to detect whether they are open or closed.
+
+The profile name is: `homie-sensor-contact/1/0`
 
 The implementation is identical to the [`homie-sensor-binary/1/0`](#homie-sensor-binary10) capability with the
 following modifications:

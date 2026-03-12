@@ -49,10 +49,10 @@ homie/5/multi-sensor/$profile/homie-sensor/1 → "0"
 
 This device-profile MUST implement at least one of the following capability-profiles:
 
-Node-ID | Capability-Profile | required | additional<br/>requirements
+Preferred Node-ID | Capability-Profile | required | additional<br/>requirements
 -|-|-|-
 power-switch|[homie-sensor-power-switch/1/0](cap-sensors-binary.md#homie-sensor-power-switch10) | no | no
-window      |[homie-sensor-window/1/0](cap-sensors-binary.md#homie-sensor-window10) | no | no
+contact     |[homie-sensor-contact/1/0](cap-sensors-binary.md#homie-sensor-contact10) | no | no
 valve       |[homie-sensor-valve/1/0](cap-sensors-binary.md#homie-sensor-valve10) | no | no
 presence    |[homie-sensor-presence/1/0](cap-sensors-binary.md#homie-sensor-presence10) | no | no
 temperature |[homie-sensor-temperature](cap-sensors-numeric.md#homie-sensor-temperature10) | no | no
